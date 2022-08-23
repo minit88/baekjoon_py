@@ -1,0 +1,13 @@
+#baekjoon 14916
+
+data = int(input())
+result5=data//5 
+result=int(1e9)
+while result5>=0:
+  result2= (data - result5*5) //2
+  if result2*2+result5*5 == data:
+    result = min(result,result2+result5)
+  result5-=1
+if result == int(1e9):
+  result=-1
+print(result)
